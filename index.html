@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>urtax.com</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <body class="home">
+            <script>
+function calculate() {
+  var moneyInput = document.getElementById("money-input").value;
+  var category1Amount = moneyInput * 0.36; // 36%
+  var category2Amount = moneyInput * 0.24; // 24%
+  var category3Amount = moneyInput * 0.17; // 17%
+  var category4Amount = moneyInput * 0.11; // 11%
+  var category5Amount = moneyInput * 0.04; // 4%
+  var category6Amount = moneyInput * 0.08; // 8%
+  document.getElementById("category1-name").textContent = "Brokerage 1";
+  document.getElementById("category1-amount").textContent = "$" + category1Amount.toFixed(2);
+  document.getElementById("category2-name").textContent = "RothIRA";
+  document.getElementById("category2-amount").textContent ="$" + category2Amount.toFixed(2);
+  document.getElementById("category3-name").textContent = "Savings";
+  document.getElementById("category3-amount").textContent ="$" + category3Amount.toFixed(2);
+  document.getElementById("category4-name").textContent = "Brokerage 2";
+  document.getElementById("category4-amount").textContent ="$" + category4Amount.toFixed(2);
+  document.getElementById("category5-name").textContent = "Crypto";
+  document.getElementById("category5-amount").textContent ="$" + category5Amount.toFixed(2);
+  document.getElementById("category6-name").textContent = "Other";
+  document.getElementById("category6-amount").textContent ="$" + category6Amount.toFixed(2);
+}
+</script>
+        </head>        
+   <div class="title">
+  <body>   
+<h1>urtax.</h1> 
+<p>your personal money system</p>
+   </div>
+<div class="elements">
+<div>
+  
+        <label class="med" for="money-input"></label>
+        <input class="input" placeholder="$$$" type="number" id="money-input">
+</div>
+</div>
+        <button class="button" onclick="calculate()">Calculate</button>
+     <div class="bigGlow">
+      </div>
+<div class="cat" id="categories">
+    <div class="category">
+      <span id="category1-name">Brokerage 1</span>
+      <br>
+      <span id="category1-amount" class="money">$0.00</span>
+    </div>
+    <div class="category">
+      <span id="category2-name">RothIRA</span>
+      <br>
+      <span id="category2-amount" class="money">$0.00</span>
+    </div>
+    <div class="category">
+      <span id="category3-name">Savings</span>
+      <br>
+      <span id="category3-amount" class="money">$0.00</span>
+    </div>
+    <div class="category">
+      <span id="category4-name">Brokerage 2</span>
+      <br>
+      <span id="category4-amount" class="money">$0.00</span>
+    </div>
+    <div class="category">
+      <span id="category5-name">Crypto</span>
+      <br>
+      <span id="category5-amount" class="money">$0.00</span>
+    </div>
+    <div class="category">
+      <span id="category6-name">Other</span>
+      <br>
+      <span id="category6-amount" class="money">$0.00</span>
+    </div>
+  </div>
+</div>
+
+</html>

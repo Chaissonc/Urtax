@@ -1,0 +1,200 @@
+html {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(0, 36, 2) 0%, rgb(9, 121, 22) 35%, rgb(3, 140, 19) 100%);
+height:100%;
+overflow: hidden;
+}
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+h1 {
+    font-size: 50px;
+}
+.home {
+    color:white;
+    font-family:sans-serif;
+    text-align: center;
+}
+
+p {
+    margin-top: -40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.category {
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    font-size: 40px;
+    padding: 10px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.cat {
+    padding-top: 150px;
+}
+.smallGlow {
+    color: #fff;
+    text-shadow:
+      0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff;
+  }
+  .bigGlow {
+    color: #fff;
+    text-shadow:
+      0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff;
+  }
+
+h1, p, .button, .input, .home {
+    font-family: Georgia;
+}
+
+
+.input {
+    height:64px;
+    width:105px;
+    --glow-color: rgb(255, 255, 255);
+    --glow-spread-color: rgba(255, 255, 255, 0.671);
+    --enhanced-glow-color: rgba(255, 255, 255, 0.712);
+    --btn-color: #088813;
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    text-align: center;
+   }
+   
+   .input:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 .75em .25em var(--glow-color);
+   }
+
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input::placeholder {
+    text-align: center;
+    color: #fff;
+}
+
+
+ .elements {
+    padding-right: 100px;
+    display:inline-block;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+
+.button {
+    height: 100px;
+    width:200px;
+    --glow-color: rgb(255, 255, 255);
+    --glow-spread-color: rgb(255, 255, 255);
+    --enhanced-glow-color: rgb(255, 255, 255);
+    --btn-color: #05ae2f;
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color),  inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+
+   .button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   .money {
+    font-size: 20px;
+   }
+  @media only screen and (max-width: 800px) {
+   html {
+    overflow: scroll;
+   }
+   body {
+   overflow: scroll;
+   }
+   
+   
+    .elements {
+        display:inline-block;
+        text-align: center;
+        padding-right: 0;
+        margin-top: 14px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .button {
+       --btn-color:#007102;
+       width: 160px;
+    }
+
+
+    .input {
+      --btn-color:#007102;
+      width: 63px;
+    }
+    html, body {
+      background: #007102;
+    }
+  .cat {
+    margin:0%;
+    margin-top:  -100px;
+  }
+  .money {
+    padding: 0%;
+    margin-top: 0px;
+  }
+
+  .title {
+    padding: 0%;
+    margin-top: 0px;
+  }
+  h1 {
+    font-size: 40px;
+    margin-top: -5px;
+  }
+
+  p {
+padding: 0%;
+margin-top: -30px;
+  }
+      .category {
+        display: block;
+        padding: 0px;
+        font-size: 30px;
+      }
+      .button {
+        margin-left: 0px;
+        margin-top: 35px;
+      }
+    .input {
+        margin-left: auto;
+        margin-right:auto ;
+    }
+  }
