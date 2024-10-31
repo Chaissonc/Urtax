@@ -1,81 +1,117 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<title>urtax.com</title>
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-        <body class="home">
-            <script>
-function calculate() {
-  var moneyInput = document.getElementById("money-input").value;
-  var category1Amount = moneyInput * 0.36; // 36%
-  var category2Amount = moneyInput * 0.24; // 24%
-  var category3Amount = moneyInput * 0.17; // 17%
-  var category4Amount = moneyInput * 0.11; // 11%
-  var category5Amount = moneyInput * 0.04; // 4%
-  var category6Amount = moneyInput * 0.08; // 8%
-  document.getElementById("category1-name").textContent = "Brokerage 1";
-  document.getElementById("category1-amount").textContent = "$" + category1Amount.toFixed(2);
-  document.getElementById("category2-name").textContent = "RothIRA";
-  document.getElementById("category2-amount").textContent ="$" + category2Amount.toFixed(2);
-  document.getElementById("category3-name").textContent = "Savings";
-  document.getElementById("category3-amount").textContent ="$" + category3Amount.toFixed(2);
-  document.getElementById("category4-name").textContent = "Brokerage 2";
-  document.getElementById("category4-amount").textContent ="$" + category4Amount.toFixed(2);
-  document.getElementById("category5-name").textContent = "Crypto";
-  document.getElementById("category5-amount").textContent ="$" + category5Amount.toFixed(2);
-  document.getElementById("category6-name").textContent = "Other";
-  document.getElementById("category6-amount").textContent ="$" + category6Amount.toFixed(2);
-}
-</script>
-        </head>        
-   <div class="title">
-  <body>   
-<h1>urtax.</h1> 
-<p>your personal money system</p>
-   </div>
-<div class="elements">
-<div>
-  
-        <label class="med" for="money-input"></label>
-        <input class="input" placeholder="$$$" type="number" id="money-input">
-</div>
-</div>
-        <button class="button" onclick="calculate()">Calculate</button>
-     <div class="bigGlow">
-      </div>
-<div class="cat" id="categories">
-    <div class="category">
-      <span id="category1-name">Brokerage 1</span>
-      <br>
-      <span id="category1-amount" class="money">$0.00</span>
-    </div>
-    <div class="category">
-      <span id="category2-name">RothIRA</span>
-      <br>
-      <span id="category2-amount" class="money">$0.00</span>
-    </div>
-    <div class="category">
-      <span id="category3-name">Savings</span>
-      <br>
-      <span id="category3-amount" class="money">$0.00</span>
-    </div>
-    <div class="category">
-      <span id="category4-name">Brokerage 2</span>
-      <br>
-      <span id="category4-amount" class="money">$0.00</span>
-    </div>
-    <div class="category">
-      <span id="category5-name">Crypto</span>
-      <br>
-      <span id="category5-amount" class="money">$0.00</span>
-    </div>
-    <div class="category">
-      <span id="category6-name">Other</span>
-      <br>
-      <span id="category6-amount" class="money">$0.00</span>
-    </div>
-  </div>
-</div>
+<head>
+    <title>urtax.com</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="home">
+    <h1>urtax.</h1>
+    <p>your personal money system</p>
 
+    <div class="elements">
+        <div>
+            <label class="med" for="money-input"></label>
+            <input class="input" placeholder="$$$" type="number" id="money-input">
+        </div>
+    </div>
+    <button class="button" onclick="calculate()">Calculate</button>
+
+    <div class="cat" id="categories">
+        <div class="category">
+            <input type="text" id="category1-name" class="name" value="Brokerage 1" onclick="selectText(this)"><br>
+            <input type="number" id="category1-percentage" value="36" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage()"> %<br>
+            <span id="category1-amount" class="money">$0.00</span>
+        </div>
+        <div class="category">
+            <input type="text" id="category2-name" class="name" value="RothIRA" onclick="selectText(this)"><br>
+            <input type="number" id="category2-percentage" value="24" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage()"> %<br>
+            <span id="category2-amount" class="money">$0.00</span>
+        </div>
+        <div class="category">
+            <input type="text" id="category3-name" class="name" value="Savings" onclick="selectText(this)"><br>
+            <input type="number" id="category3-percentage" value="17" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage()"> %<br>
+            <span id="category3-amount" class="money">$0.00</span>
+        </div>
+        <div class="category">
+            <input type="text" id="category4-name" class="name" value="Brokerage 2" onclick="selectText(this)"><br>
+            <input type="number" id="category4-percentage" value="11" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage()"> %<br>
+            <span id="category4-amount" class="money">$0.00</span>
+        </div>
+        <div class="category">
+            <input type="text" id="category5-name" class="name" value="Crypto" onclick="selectText(this)"><br>
+            <input type="number" id="category5-percentage" value="4" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage()"> %<br>
+            <span id="category5-amount" class="money">$0.00</span>
+        </div>
+        <div class="category">
+            <input type="text" id="category6-name" class="name" value="Other" onclick="selectText(this)"><br>
+            <input type="number" id="category6-percentage" value="8" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage()"> %<br>
+            <span id="category6-amount" class="money">$0.00</span>
+        </div>
+    </div>
+
+    <p id="total-percentage" style="margin-top: 20px;">Total Percentage: 100%</p>
+    <p id="remaining-percentage" style="margin-top: 5px;">Percentage Left: 0%</p>
+
+    <script>
+        // Function to select all text when input is clicked
+        function selectText(element) {
+            element.select();
+        }
+
+        // Function to update and display the total and remaining percentages in real-time
+        function updateTotalPercentage() {
+            var percentages = document.querySelectorAll('.percentage');
+            var total = Array.from(percentages).reduce((sum, input) => sum + parseFloat(input.value || 0), 0);
+            var totalPercentageElement = document.getElementById('total-percentage');
+            var remainingPercentageElement = document.getElementById('remaining-percentage');
+
+            totalPercentageElement.textContent = "Current Total: " + total.toFixed(2) + "%";
+            if (total < 100) {
+                totalPercentageElement.style.color = 'orange';
+                remainingPercentageElement.textContent = "Percentage Left: " + (100 - total).toFixed(2) + "%";
+                remainingPercentageElement.style.color = 'orange';
+            } else if (total === 100) {
+                totalPercentageElement.style.color = 'green';
+                remainingPercentageElement.textContent = "Perfect! No Percentage Left.";
+                remainingPercentageElement.style.color = 'green';
+            } else {
+                totalPercentageElement.style.color = 'red';
+                remainingPercentageElement.textContent = "Exceeded by: " + (total - 100).toFixed(2) + "%";
+                remainingPercentageElement.style.color = 'red';
+            }
+        }
+
+        function calculate() {
+            var moneyInput = parseFloat(document.getElementById("money-input").value);
+            if (isNaN(moneyInput) || moneyInput <= 0) {
+                alert("Please enter a valid number greater than 0");
+                return;
+            }
+
+            // Get percentages and validate if they add up to 100
+            var percentages = [
+                parseFloat(document.getElementById("category1-percentage").value),
+                parseFloat(document.getElementById("category2-percentage").value),
+                parseFloat(document.getElementById("category3-percentage").value),
+                parseFloat(document.getElementById("category4-percentage").value),
+                parseFloat(document.getElementById("category5-percentage").value),
+                parseFloat(document.getElementById("category6-percentage").value)
+            ];
+            
+            var totalPercentage = percentages.reduce((sum, current) => sum + current, 0);
+
+            if (totalPercentage !== 100) {
+                alert("The total percentage must add up to 100%. Your total is currently " + totalPercentage + "%.");
+                return;
+            }
+
+            // Calculate the amounts for each category and display them
+            for (var i = 0; i < percentages.length; i++) {
+                var amount = moneyInput * (percentages[i] / 100);
+                document.getElementById(`category${i + 1}-amount`).textContent = "$" + amount.toFixed(2);
+            }
+        }
+    </script>
+</body>
 </html>
