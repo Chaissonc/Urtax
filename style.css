@@ -13,6 +13,7 @@ html, body {
 html {
     background: linear-gradient(135deg, rgb(0, 28, 2) 0%, rgb(9, 121, 22) 60%, rgb(3, 140, 19) 100%);
     background-color: rgb(9, 121, 22);
+    overflow: hidden;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
     align-items: center;
     padding: 40px 20px 60px;
     gap: 24px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -284,6 +285,11 @@ input::-webkit-inner-spin-button {
 
 /* ── Mobile ── */
 @media only screen and (max-width: 600px) {
+    html{
+        background:  rgb(7, 104, 18);
+        background-color: rgb(7, 104, 18);
+    }
+    
     body {
         padding: 28px 16px 48px;
         gap: 20px;
