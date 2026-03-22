@@ -288,6 +288,8 @@ input::-webkit-inner-spin-button {
     html{
         background:  rgb(7, 104, 18);
         background-color: rgb(7, 104, 18);
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
     
     body {
@@ -297,6 +299,7 @@ input::-webkit-inner-spin-button {
 
     h1 {
         font-size: 42px;
+        padding-top: 50px;
     }
 
     .elements {
