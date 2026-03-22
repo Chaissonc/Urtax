@@ -18,7 +18,7 @@ function renderCategories() {
             ${categories.length > 2 ? `<button class="remove-btn" onclick="removeCategory(${i})">−</button>` : ''}
             <input type="text" id="category${i+1}-name" class="name" oninput="saveToStorage()" value="${cat.name}" onclick="selectText(this)">
             <div class="pct-row">
-                <input type="number" id="category${i+1}-percentage" value="${cat.percentage}" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage(); saveToStorage()">
+                <input type="number" inputmode="decimal" id="category${i+1}-percentage" value="${cat.percentage}" class="percentage" onclick="selectText(this)" oninput="updateTotalPercentage(); saveToStorage()">
                 <span class="pct-sign">%</span>
             </div>
             <span id="category${i+1}-amount" class="money">$0.00</span>

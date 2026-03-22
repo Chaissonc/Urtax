@@ -12,6 +12,7 @@ html, body {
 
 html {
     background: linear-gradient(135deg, rgb(0, 28, 2) 0%, rgb(9, 121, 22) 60%, rgb(3, 140, 19) 100%);
+    background-color: rgb(9, 121, 22);
 }
 
 body {
