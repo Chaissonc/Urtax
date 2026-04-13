@@ -6,7 +6,7 @@
 <p align="center"><strong>Your personal money system.</strong></p>
 
 <p align="center">
-  <a href="https://urtax.com">🔗 urtax.com</a> &nbsp;·&nbsp;
+  <a href="https://chaissonc.github.io/Urtax/">🔗 chaissonc.github.io/Urtax</a> &nbsp;·&nbsp;
   <img src="https://img.shields.io/badge/built%20with-vanilla%20JS-f7df1e?style=flat-square&logo=javascript&logoColor=black" alt="Built with vanilla JS" />
   <img src="https://img.shields.io/badge/no%20signups-required-brightgreen?style=flat-square" alt="No signups" />
   <img src="https://img.shields.io/badge/mobile-friendly-4CAF50?style=flat-square&logo=apple" alt="Mobile friendly" />
