@@ -11,8 +11,8 @@ html, body {
 }
 
 html {
-    background: linear-gradient(135deg, rgb(0, 28, 2) 0%, rgb(9, 121, 22) 60%, rgb(3, 140, 19) 100%);
-    background-color: rgb(9, 121, 22);
+    background: linear-gradient(135deg, #235429 0%, #0C1D0F 100%);
+    background-color: #235429;
     overflow: hidden;
 }
 
@@ -63,14 +63,14 @@ h1 {
     width: 180px;
     --glow-color: rgb(255, 255, 255);
     --glow-spread-color: rgba(255, 255, 255, 0.4);
-    --btn-color: #1a7d24;
+    --btn-color: #235429;
     border: 2px solid var(--glow-color);
     padding: 0 20px;
     color: var(--glow-color);
     font-size: 22px;
     font-weight: 700;
     font-family: 'Outfit', sans-serif;
-    background-color: var(--btn-color);
+    background-color: transparent;
     border-radius: 14px;
     outline: none;
     box-shadow: 0 0 12px 3px var(--glow-color),
@@ -104,7 +104,7 @@ input::-webkit-inner-spin-button {
     width: 180px;
     --glow-color: rgb(255, 255, 255);
     --glow-spread-color: rgba(255, 255, 255, 0.4);
-    --btn-color: #1a7d24;
+    --btn-color: #235429;
     border: 2px solid var(--glow-color);
     padding: 0 20px;
     color: var(--glow-color);
@@ -112,7 +112,7 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
     font-family: 'Outfit', sans-serif;
     letter-spacing: 1px;
-    background-color: var(--btn-color);
+    background-color: transparent;
     border-radius: 14px;
     outline: none;
     box-shadow: 0 0 12px 3px var(--glow-color),
@@ -311,8 +311,8 @@ input::-webkit-inner-spin-button {
 /* ── Mobile ── */
 @media only screen and (max-width: 600px) {
     html{
-        background:  rgb(7, 104, 18);
-        background-color: rgb(7, 104, 18);
+        background: #235429;
+        background-color: #235429;
         overflow-y: scroll;
         overflow-x: hidden;
     }

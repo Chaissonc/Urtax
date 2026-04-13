@@ -78,9 +78,10 @@ function saveToStorage() {
         var nameEl = document.getElementById(`category${i}-name`);
         var pctEl = document.getElementById(`category${i}-percentage`);
         if (nameEl && pctEl) {
-            data.push({ name: nameEl.value, percentage: pctEl.value });
+            data.push({ name: nameEl.value, percentage: parseFloat(pctEl.value) || 0 });
         }
     }
+    categories = data;
     localStorage.setItem('categories', JSON.stringify(data));
 }
 
