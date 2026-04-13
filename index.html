@@ -4,7 +4,7 @@
     <title>urtax.com</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Syne:wght@800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="home">
@@ -19,10 +19,12 @@
     <div class="cat" id="categories"></div>
     
     <div class="center">
-<button class="template" onclick="resetToBlank()">Blank Template</button>
-
-    <p class="percentDisplay" id="remaining-percentage" style="margin-top: 5px;">Percentage Remaining: 0%</p>
-</div>
+        <div class="template-row">
+            <button class="template" onclick="resetToBlank()">Blank Template</button>
+            <button class="template" onclick="resetToExample()">Example</button>
+        </div>
+        <p class="percentDisplay" id="remaining-percentage" style="margin-top: 5px;">Percentage Remaining: 0%</p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

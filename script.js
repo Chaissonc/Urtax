@@ -102,6 +102,20 @@ function resetToBlank() {
     renderCategories();
 }
 
+function resetToExample() {
+    categories = [
+        { name: 'Brokerage 1', percentage: 36 },
+        { name: 'RothIRA', percentage: 24 },
+        { name: 'Savings', percentage: 17 },
+        { name: 'Brokerage 2', percentage: 11 },
+        { name: 'Crypto', percentage: 4 },
+        { name: 'Other', percentage: 8 }
+    ];
+    document.getElementById("money-input").value = "";
+    localStorage.clear();
+    renderCategories();
+}
+
 function calculate() {
     var moneyInput = parseFloat(document.getElementById("money-input").value);
     if (isNaN(moneyInput) || moneyInput <= 0) {
